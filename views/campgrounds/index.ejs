@@ -1,0 +1,72 @@
+<%- include("../partials/header") %>
+
+<div class="jumbotron" style="background-color:transparent !important;">
+	<div class="container">
+
+
+		<h1>Gallery of the Globe<i class="fa fa-globe"></i></h1>
+		<p>
+			Share your pictures from wherever you are in the world and find a place that you'd want to visit
+		</p>
+		<p>
+			<a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Post</a>
+		</p>
+		<% if(currentUser && currentUser.isAdmin) {%>
+
+		<h1 style="text-align: end; color: rgb(255, 217, 0);"> You're an Admin!</h1>
+		<% } %>
+	</div>
+
+</div>
+
+<div class="container">
+
+
+
+
+
+	<!-- <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+		<% campgrounds.forEach(function(campground){ %>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<img src="<%= campground.image %>">
+				<div class="caption">
+					<h4><%= campground.name%></h4>
+				</div>
+				<p>
+					<a href="/campgrounds/<%= campground._id%>" class="btn btn-primary">More Info</a>
+				</p>
+			</div>
+
+		</div>
+		<% }); %>
+	</div> -->
+
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+		<% campgrounds.forEach(function(campground){ %>
+		<div class="ui card" style="height: 20%;">
+			
+				<img src="<%= campground.image %>">
+			
+			<div class="content">
+				<a class="header"><%= campground.name%></a>
+				<div class="meta">
+					<span class="date">Joined in 2013</span>
+				</div>
+				<div class="description">
+
+					<a href="/campgrounds/<%= campground._id%>" class="btn btn-primary">More Info</a>
+
+				</div>
+			</div>
+
+		</div>
+		<% }); %>
+	</div>
+
+
+
+
+</div>
+
+<%- include("../partials/footer") %>
