@@ -24,13 +24,13 @@ router.post("/", middleware.isLoggedIn, function(req,res){
 	var name = req.body.name;
 	var image = req.body.image;
 	// var price = req.body.price;
-	var information = req.body.information;
+	var thingsToKnow = req.body.thingsToKnow;
 	var desc = req.body.description;
 	var author = {
 		id: req.user._id,
 		username: req.user.username
 	}
-	var newCampground = {name: name, information:information, image:image, description: desc, author:author};
+	var newCampground = {name: name, thingsToKnow:thingsToKnow, image:image, description: desc, author:author};
 	
 	//Create a new campground and save to DB
 	Campground.create(newCampground, function(err, newlyCreated){

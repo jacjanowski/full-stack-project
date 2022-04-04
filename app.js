@@ -21,7 +21,7 @@ mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true
   })
-  .then(() => console.log('DB connected!'))
+  .then(() => console.log('DB connected!!!'))
   .catch(err => {
     console.log(`DB Connection Error: ${err.message}`);
   });
@@ -34,7 +34,7 @@ app.use(flash());
 
 
 //seed the DB
-seedDB();
+//seedDB();
 
 
 //passport Configuration
