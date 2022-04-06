@@ -1,31 +1,42 @@
 <%- include("./partials/header") %>
 
-
 <div class="container">
-	<div class="row" style="text-align: center;"> 
-		<h1 style="text-align: center;">
-			Login page
-		</h1>
+  <div class="row">
+    <div class="col-lg-3 col-md-2"></div>
+    <div class="col-lg-6 col-md-8 login-box">
+      <div class="col-lg-12 login-key">
+        <i class="fa fa-key" aria-hidden="true"></i>
+      </div>
+      <div class="col-lg-12 login-title">LOGIN</div>
 
-		<form id="test" class="ui form" action="/login" method="POST">
-			<div class="field">
-			  <h4>Username</h4>
-			  <input style="width: 50%;" type="text" name="username" placeholder="First Name">
-			</div>
-			<div class="field">
-			  <h4>Password</h4>
-			  <input style="width: 50%;" type="password" name="password" placeholder="Last Name">
-			</div>
+      <div class="col-lg-12 login-form">
+        <div class="col-lg-12 login-form">
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label class="form-control-label">USERNAME</label>
+              <input name="username" type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label class="form-control-label">PASSWORD</label>
+              <input name="password" type="password" class="form-control" i />
+            </div>
 
-			<input type="submit" value="Login!" class="ui primary button">
-		  </form>
-
-		<!-- <form id="test" action="/login" method="POST">
-			<input type="text" name="username" placeholder="username">
-			<input type="password" name="password" placeholder="password">
-			<input type="submit" value="Login!">
-		</form> -->
-	</div>
+            <div class="col-lg-12 loginbttm">
+              <div class="col-lg-6 login-btm login-text">
+                <!-- Error Message -->
+              </div>
+              <div class="col-lg-6 login-btm login-button">
+                <button type="submit" class="btn btn-outline-primary">
+                  LOGIN
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-2"></div>
+    </div>
+  </div>
 </div>
 
 <%- include("./partials/footer") %>

@@ -39,7 +39,7 @@ app.use(flash());
 
 //passport Configuration
 app.use(require("express-session")({
-		secret: "Dietz",
+		secret: "secretpassword48",
 		resave: false,
 		saveUninitialized: false
 	}));
