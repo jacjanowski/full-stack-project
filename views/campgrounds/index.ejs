@@ -2,10 +2,9 @@
 
 <div class="jumbotron" style="background-color: transparent !important">
   <div class="container">
-    <h1>Gallery of the Globe<i class="fa fa-globe"></i></h1>
+    <h1>Posted <i class="fa fa-book"></i></h1>
     <p>
-      Share your pictures from wherever you are in the world and find a place
-      that you'd want to visit
+      A place to blog about your hobbies, provide educational articles, or tell a story of your own. Your way of keeping us Posted.
     </p>
     <p>
       <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Post</a>
@@ -42,14 +41,16 @@
         <img src="<%= campground.image %>" />
 
         <div class="content">
-          <a class="header"><%= campground.name%></a>
+          <a style="font-family: 'Playfair Display', serif;" class="header"><%= campground.name%></a>
           <div class="meta">
-            <span class="date">Joined in 2013</span>
+            <span class="summary"><%= campground.description%></span>
           </div>
           <div class="description">
             <a href="/campgrounds/<%= campground._id%>" class="btn btn-primary"
               >More Info</a
             >
+            <p><%= campground.date.toLocaleDateString();%></p>
+            
           </div>
         </div>
       </div>
